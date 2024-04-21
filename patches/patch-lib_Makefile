@@ -1,0 +1,14 @@
+$NetBSD$
+
+-Werror is for maintainers, not users.
+
+--- lib/Makefile.orig	2024-04-20 18:31:03.700183518 +0000
++++ lib/Makefile
+@@ -1,6 +1,6 @@
+ ACEUNIT_HOME?=../
+ CPPFLAGS+=-I$(ACEUNIT_HOME)/include/
+-CFLAGS+=-W -Wall -pedantic -Werror
++CFLAGS+=-W -Wall -pedantic
+ ACEUNIT:=$(ACEUNIT_HOME)/bin/aceunit
+ 
+ .PHONY: all
